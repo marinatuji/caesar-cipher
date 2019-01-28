@@ -1,13 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div id="root"></div>
+  <script src="cipher.js"></script>
+
+  <h1>Cifra de Cesar</h1>
+
+  <h2></h2>
+<!--This is a comment. onsubmit="return decode(this)" / this.mcipher.value,this.kcipher.value-->
+<!--
+   -->
+  <div>
+  <form name="form-cipher" onsubmit="return encode(this)">
+
+    <p class="msg-cipher">
+        <label for="msg-cipher">Cifrar Mensagem</label>
+      <input type="textaea" rows="5" cols="30" id="cipher-id" placeholder="Inserir Mensagem" name="mcipher">
+    </p>
+    <p class="key-cipher">
+        <label for="key-cipher">Chave : </label>
+      <input type="number" min="1" id="keycipherid" placeholder="Chave de Deslocamento" name="kcipher">
+    </p>
+    <p class="submit">
+      <input type="submit" value="Cifrar">
+    </p>
+
+  </form>
+</div>
+
+<div>
+<form name="form-decipher" onsubmit="return decode(this)">
+
+    <p class="msg-decipher">
+        <label for="msg-decipher">Decifrar Mensagem</label>
+      <input type="textarea" id="decipher-id" placeholder="Inserir Mensagem" name="mdecipher">
+    </p>
+    <p class="key-decipher">
+        <label for="key-decipher">Chave : </label>
+      <input type="number" min="1" id="keydecipherid" placeholder="Chave de Deslocamento" name="kdecipher">
+    </p>
+    <p class="submit">
+      <input type="submit" value="Decifrar">
+    </p>
+  </form>
+</div>
+<!--
+  
+-->
+
+</body>
+
 </html>

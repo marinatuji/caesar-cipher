@@ -37,7 +37,6 @@ function decode(form) {
         let indexAsc = msgDecipher.charCodeAt(i);
         let originalIndex = ((indexAsc - 65 - (((offset % 26) + 26)) % 26)) + 65; //funcao da Ma
         msgDecoded += String.fromCharCode(originalIndex);
-
     }
     alert(msgDecoded);
 }

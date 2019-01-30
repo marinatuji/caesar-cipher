@@ -10,33 +10,31 @@
 <body class="tela">
 
   <script src="cipher.js"></script>
+  <script src="tests.js"></script>
 
   <h1 class="title">Cifra de Cesar</h1>
   <!--This is a comment. testar break para colocar teste-->
-  <!--
-   -->
   <div class="container-cipher">
-    <form class="input-cipher" name="form-cipher" onsubmit= "buildMsgCipher(this); return false">
+    <form class="input-cipher" name="form-cipher" onsubmit="buildMsgCipher(this); return false">
       <div class="msg-cipher">
         <label for="msg-cipher">Mensagem : </label>
-        <textarea type="text" id="cipher-msg" required rows="4" cols="30" placeholder="Inserir Mensagem"
-          name="mcipher"></textarea>
+        <textarea type="text" required rows="4" cols="30" placeholder="Inserir Mensagem" name="mcipher"></textarea>
       </div>
 
       <div class="key-cipher">
         <label for="key-cipher">Chave : </label>
-        <input type="number" required id="keycipherid" placeholder="Chave de Deslocamento" name="kcipher">
+        <input type="number" required placeholder="Chave de Deslocamento" name="kcipher">
       </div>
       <div class="submit">
         <input type="submit" value="Cifrar">
       </div>
-<p id="show-msg"></p>
+      <p id="show-msg"></p>
   </div>
   </form>
   </div>
 
   <div>
-    <form name="form-decipher" onsubmit="return decode(this)">
+    <form name="form-decipher" onsubmit="return buildMsgDe(this); return false">
 
       <p class="msg-decipher">
         <label for="msg-decipher">Decifrar Mensagem</label>
@@ -50,9 +48,9 @@
         <input type="submit" value="Decifrar">
       </p>
 
-      
-    <input id="text"></input>
-    
+
+      <input id="text"></input>
+
 
     </form>
   </div>

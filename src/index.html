@@ -7,52 +7,56 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="tela">
 
-  <div id="root"></div>
   <script src="cipher.js"></script>
 
-  <h1>Cifra de Cesar</h1>
-
-  <h2></h2>
-<!--This is a comment. onsubmit="return decode(this)" / this.mcipher.value,this.kcipher.value-->
-<!--
+  <h1 class="title">Cifra de Cesar</h1>
+  <!--This is a comment. testar break para colocar teste-->
+  <!--
    -->
-  <div>
-  <form name="form-cipher" onsubmit="return encode(this)">
+  <div class="container-cipher">
+    <form class="input-cipher" name="form-cipher" onsubmit= "buildMsgCipher(this); return false">
+      <div class="msg-cipher">
+        <label for="msg-cipher">Mensagem : </label>
+        <textarea type="text" id="cipher-msg" required rows="4" cols="30" placeholder="Inserir Mensagem"
+          name="mcipher"></textarea>
+      </div>
 
-    <p class="msg-cipher">
-        <label for="msg-cipher">Cifrar Mensagem</label>
-      <input type="textaea" rows="5" cols="30" id="cipher-id" placeholder="Inserir Mensagem" name="mcipher">
-    </p>
-    <p class="key-cipher">
+      <div class="key-cipher">
         <label for="key-cipher">Chave : </label>
-      <input type="number" min="1" id="keycipherid" placeholder="Chave de Deslocamento" name="kcipher">
-    </p>
-    <p class="submit">
-      <input type="submit" value="Cifrar">
-    </p>
-
+        <input type="number" required id="keycipherid" placeholder="Chave de Deslocamento" name="kcipher">
+      </div>
+      <div class="submit">
+        <input type="submit" value="Cifrar">
+      </div>
+<p id="show-msg"></p>
+  </div>
   </form>
-</div>
+  </div>
 
-<div>
-<form name="form-decipher" onsubmit="return decode(this)">
+  <div>
+    <form name="form-decipher" onsubmit="return decode(this)">
 
-    <p class="msg-decipher">
+      <p class="msg-decipher">
         <label for="msg-decipher">Decifrar Mensagem</label>
-      <input type="textarea" id="decipher-id" placeholder="Inserir Mensagem" name="mdecipher">
-    </p>
-    <p class="key-decipher">
+        <input type="textarea" id="decipher-id" placeholder="Inserir Mensagem" name="mdecipher">
+      </p>
+      <p class="key-decipher">
         <label for="key-decipher">Chave : </label>
-      <input type="number" min="1" id="keydecipherid" placeholder="Chave de Deslocamento" name="kdecipher">
-    </p>
-    <p class="submit">
-      <input type="submit" value="Decifrar">
-    </p>
-  </form>
-</div>
-<!--
+        <input type="number" min="1" id="keydecipherid" placeholder="Chave de Deslocamento" name="kdecipher">
+      </p>
+      <p class="submit">
+        <input type="submit" value="Decifrar">
+      </p>
+
+      
+    <input id="text"></input>
+    
+
+    </form>
+  </div>
+  <!--
   
 -->
 

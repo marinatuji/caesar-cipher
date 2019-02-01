@@ -1,8 +1,8 @@
 header {
 color: white;
-font-size: 40;
+font-size: 30px;
 font-style: italic;
-font-family: 'Lucida Sans'; 
+font-family: 'Lucida Sans';
 }
     
 .title {
@@ -12,7 +12,7 @@ font: lucida;
 }
     
 body {
-background-color: black;
+background-color:   #ffcccc;
 background-image: url('./Matrix.jpg');
 background-repeat: no-repeat;
 background-size: 100%;
@@ -21,13 +21,28 @@ width: auto;
 height: auto;
 }
 
-.container-cipher {
-display: inline;
-}
-
 #show-msg{
     color: pink;
 }
 .result {
     font-style: lucida;
+}
+
+.label {
+    color: white;
+    font-size: 20px;
+    font-family: 'Lucida', 'Lucida sans' ;
+    margin-right: auto;
+    padding-right: 1px; /* entender melhor esse atributo */
+
+}
+
+textarea{
+    width: 30em;
+    height: 5em;
+}
+
+input{
+    width: 10em;
+    height: 2em;
 }

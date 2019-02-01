@@ -1,12 +1,14 @@
-function buildMsgCipher(form) {
-    let offset = parseInt(form.kcipher.value);
-    let string = form.mcipher.value;
+function buildMsgCipher(event, form) {
+    event.preventDefault();
+    let offset = parseInt(form.inputKey.value);
+    let string = form.inputMessage.value;
     document.getElementById("show-msg").innerHTML = encode(offset, string);
 }
 
-function buildMsgDecipher(form) {
-    let offset = parseInt(form.kcipher.value);
-    let string = form.mcipher.value;
+function buildMsgDecipher(event, form) {
+    event.preventDefault();
+    let offset = parseInt(form.inputKey.value);
+    let string = form.inputMessage.value;
     document.getElementById("show-msg").innerHTML = decode(offset, string);
 }
 

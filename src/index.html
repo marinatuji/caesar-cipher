@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="cipher.js"></script>
-  <script src="tests.js"></script>
 </head>
 
 <header>
@@ -15,24 +13,26 @@
 
 <body>
   <!-- This is a comment. testar break para colocar teste -->
-  <div class="container-cipher">
-    <form class="input-cipher" name="form-cipher" onsubmit="buildMsgDecipher(this); return false">
-      <div class="input-cipher">
-        <label for="msg-cipher">Mensagem : </label><br>
-        <textarea type="text" name="mcipher" required rows="4" cols="35" placeholder="Inserir Mensagem"></textarea><br>
-
-        <label for="key-cipher">Chave : </label><br>
-        <input type="number" name="kcipher" required placeholder="Chave de Deslocamento">
-
+  <div class="container-form">
+    <form class="input-cipher" name="form-cipher" onsubmit="buildMsgCipher(event, this)">
+      <div class="input-datas">
+        <label class="label input-message" id="input-message">Mensagem : </label><br>
+        <textarea type="text" name="inputMessage" required rows="4" cols="35" placeholder="Inserir Mensagem">
+        </textarea><br>
+        <label class="label input-key">Chave : </label><br>
+        <input type="number" name="inputKey" required placeholder="Chave de Deslocamento"><br>
+        <p></p>
         <div class="submit">
           <input type="submit" value="Cifrar">
-        </div>
-        <label name="show-msg"> Resultado : </label>
+        </div><br>
+        <label for="show-msg"> Resultado : </label>
         <p type="text" id="show-msg"></p>
       </div>
     </form>
   </div>
 
+  <script src="cipher.js"></script>
+  <script src="tests.js"></script>
 </body>
 
 </html>

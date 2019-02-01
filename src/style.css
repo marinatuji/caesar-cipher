@@ -1,11 +1,33 @@
-.tela {
-background-color: #ffccff;
-background-size: cover;
-
+header {
+color: white;
+font-size: 40;
+font-style: italic;
+font-family: 'Lucida Sans'; 
 }
-
+    
 .title {
 color: black;
 font-style: italic;
 font: lucida; 
+}
+    
+body {
+background-color: black;
+background-image: url('./Matrix.jpg');
+background-repeat: no-repeat;
+background-size: 100%;
+text-align: center;
+width: auto;
+height: auto;
+}
+
+.container-cipher {
+display: inline;
+}
+
+#show-msg{
+    color: pink;
+}
+.result {
+    font-style: lucida;
 }

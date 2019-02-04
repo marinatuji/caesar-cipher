@@ -7,35 +7,38 @@ function buildMessage(event, form) {
 }
 
 function encode(offset, string) {
-    let msgEncoded = "";
+    if (offset < 0) {
+        return decode(-offset, string);
+    }
+    let messageEncoded = "";
     for (i = 0; i < string.length; i++) {
         let indexAsc = string.charCodeAt(i);
         if (indexAsc >= 65 && indexAsc <= 90) {
             let offsetIndex = ((indexAsc - 65 + offset) % 26) + 65;
-            msgEncoded += String.fromCharCode(offsetIndex);
+            messageEncoded += String.fromCharCode(offsetIndex);
         } else if (indexAsc >= 97 && indexAsc <= 122) {
             let offsetIndex = ((indexAsc - 97 + offset) % 26) + 97;
-            msgEncoded += String.fromCharCode(offsetIndex);
+            messageEncoded += String.fromCharCode(offsetIndex);
         } else {
-            msgEncoded += String.fromCharCode(indexAsc);
+            messageEncoded += String.fromCharCode(indexAsc);
         }
     }
-    return msgEncoded;
+    return messageEncoded;
 }
 
 function decode(offset, string) {
-    let msgDecoded = "";
+    let messageDecoded = "";
     for (i = 0; i < string.length; i++) {
         let indexAsc = string.charCodeAt(i);
         if (indexAsc >= 65 && indexAsc <= 90) {
             let offsetIndex = (indexAsc - 65 - (offset % 26) + 26) % 26 + 65; //funcao da Ma
-            msgDecoded += String.fromCharCode(offsetIndex);
+            messageDecoded += String.fromCharCode(offsetIndex);
         } else if (indexAsc >= 97 && indexAsc <= 122) {
             let offsetIndex = (indexAsc - 97 - (offset % 26) + 26) % 26 + 97;
-            msgDecoded += String.fromCharCode(offsetIndex);
+            messageDecoded += String.fromCharCode(offsetIndex);
         } else {
-            msgDecoded += String.fromCharCode(indexAsc);
+            messageDecoded += String.fromCharCode(indexAsc);
         }
     }
-    return msgDecoded;
+    return messageDecoded;
 }

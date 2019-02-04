@@ -1,4 +1,0 @@
-Tasks (TODO)
-
-- Criar um arquivo README com diagrama de blocos e definição de usuários
-- 

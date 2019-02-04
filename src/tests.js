@@ -1,5 +1,4 @@
-//pensar nos testes da sua aplicação javascript
-function testEncode(calculeted, expect) {
+function verifiedEncode(calculeted, expect) {
     if (calculeted === expect) {
         console.info("ok!");
     } else {
@@ -7,16 +6,16 @@ function testEncode(calculeted, expect) {
     }
 }
 //caso positivo
-testEncode(encode(1, "abc"), "bcd");
-testEncode(encode(25, "abc"), "zab");
-testEncode(encode(11, "Rei Babar"), "Cpt Mlmlc");
-testEncode(encode(40,"abc"),"opq");
-testEncode(encode(1,"abcABC 123@"), "bcdBCD 123@");
+verifiedEncode(encode(1, "abc"), "bcd");
+verifiedEncode(encode(25, "abc"), "zab");
+verifiedEncode(encode(11, "Rei Babar"), "Cpt Mlmlc");
+verifiedEncode(encode(40,"abc"),"opq");
+verifiedEncode(encode(1,"abcABC 123@"), "bcdBCD 123@");
 
 //caso negativo
-testEncode(encode(-1, "abc"), "zab");
+verifiedEncode(encode(-1, "abc"), "zab");
 
-function testDecode(calculeted, expect) {
+function verifiedDecode(calculeted, expect) {
     if (calculeted === expect) {
         console.info("Ok!");
     } else {
@@ -25,10 +24,10 @@ function testDecode(calculeted, expect) {
 }
 
 //caso positivo
-testDecode(decode(1, "bcd"), "abc");
-testDecode(decode(25,"zab"),"abc");
-testDecode(decode(11,"Cpt Mlmlc"),"Rei Babar");
-testDecode(decode(40,"opq"),"abc");
-testDecode(decode(1,"bcdBCD 123@"), "abcABC 123@");
+verifiedDecode(decode(1, "bcd"), "abc");
+verifiedDecode(decode(25,"zab"),"abc");
+verifiedDecode(decode(11,"Cpt Mlmlc"),"Rei Babar");
+verifiedDecode(decode(40,"opq"),"abc");
+verifiedDecode(decode(1,"bcdBCD 123@"), "abcABC 123@");
 //caso negativo
-testDecode(decode(-1, "zab"), "abc");
+verifiedDecode(decode(-1, "zab"), "abc");

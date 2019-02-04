@@ -13,7 +13,7 @@
 
 <body>
   <div class="container-form">
-    <form class="input-cipher" name="form-cipher" onsubmit="buildMsgCipher(event, this)">
+    <form class="input-cipher" name="form-cipher" onsubmit="buildMessage(event, this)">
       <div class="input-datas">
         <label class="label input-message">Mensagem : </label><br>
         <textarea type="text" name="inputMessage" required rows="4" cols="35" placeholder="Inserir Mensagem">
@@ -30,7 +30,7 @@
           <input class="submit input-datas" type="submit" name="selection" value="Enviar">
         </div>
         <div>
-          <label for="show-message"> Resultado : </label>
+          <label class="label show-message"for="show-message"> Resultado da sua Mensagem: </label>
           <p type="text" id="show-message"></p>
         </div>
       </div>

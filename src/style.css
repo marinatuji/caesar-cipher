@@ -1,48 +1,44 @@
 header {
 color: white;
-font-size: 30px;
+font-size: 20px;
 font-style: italic;
 font-family: 'Lucida Sans';
 }
     
-.title {
-color: black;
+h1 {
+color: #ebebe6;
 font-style: italic;
 font: lucida; 
 }
     
 body {
-background-color:   #ffcccc;
-background-image: url('./Matrix.jpg');
+background-color: black;
+background-image: url('./assets/ColorMatrix.jpg');
 background-repeat: no-repeat;
-background-size: 100%;
 text-align: center;
-width: auto;
-height: auto;
-}
-
-#show-msg{
-    color: pink;
-}
-.result {
-    font-style: lucida;
+max-width: 1200px;
+max-height: 1200px;
 }
 
 .label {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Lucida', 'Lucida sans' ;
     margin-right: auto;
-    padding-right: 1px; /* entender melhor esse atributo */
-
 }
 
-textarea{
-    width: 30em;
+.input-message {
+    width: 20em;
     height: 5em;
 }
 
-input{
-    width: 10em;
+.submit {
+    width: 8em;
     height: 2em;
+}
+#show-message {
+    color:#3399ff;
+    font-family: 'Lucida Sans';
+    font-size: 18px;
+    font-style: bold;
 }

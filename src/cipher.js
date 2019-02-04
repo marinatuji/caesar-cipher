@@ -10,35 +10,35 @@ function encode(offset, string) {
     if (offset < 0) {
         return decode(-offset, string);
     }
-    let messageEncoded = "";
+    let encodedMessage = "";
     for (i = 0; i < string.length; i++) {
         let indexAsc = string.charCodeAt(i);
         if (indexAsc >= 65 && indexAsc <= 90) {
             let offsetIndex = ((indexAsc - 65 + offset) % 26) + 65;
-            messageEncoded += String.fromCharCode(offsetIndex);
+            encodedMessage += String.fromCharCode(offsetIndex);
         } else if (indexAsc >= 97 && indexAsc <= 122) {
             let offsetIndex = ((indexAsc - 97 + offset) % 26) + 97;
-            messageEncoded += String.fromCharCode(offsetIndex);
+            encodedMessage += String.fromCharCode(offsetIndex);
         } else {
-            messageEncoded += String.fromCharCode(indexAsc);
+            encodedMessage += String.fromCharCode(indexAsc);
         }
     }
-    return messageEncoded;
+    return encodedMessage;
 }
 
 function decode(offset, string) {
-    let messageDecoded = "";
+    let decodedMessage = "";
     for (i = 0; i < string.length; i++) {
         let indexAsc = string.charCodeAt(i);
         if (indexAsc >= 65 && indexAsc <= 90) {
             let offsetIndex = (indexAsc - 65 - (offset % 26) + 26) % 26 + 65; //funcao da Ma
-            messageDecoded += String.fromCharCode(offsetIndex);
+            decodedMessage += String.fromCharCode(offsetIndex);
         } else if (indexAsc >= 97 && indexAsc <= 122) {
             let offsetIndex = (indexAsc - 97 - (offset % 26) + 26) % 26 + 97;
-            messageDecoded += String.fromCharCode(offsetIndex);
+            decodedMessage += String.fromCharCode(offsetIndex);
         } else {
-            messageDecoded += String.fromCharCode(indexAsc);
+            decodedMessage += String.fromCharCode(indexAsc);
         }
     }
-    return messageDecoded;
+    return decodedMessage;
 }

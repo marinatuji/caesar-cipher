@@ -7,8 +7,6 @@ primeiros tipos de criptografias conhecidos na história. É um tipo de cifra po
 substituição, em que uma letra no texto original é substituída por outra,
 seguindo um número fixo para essa subtituição.
 
-![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
-
 O imperador Júlio César usou essa cifra para enviar ordens aos seus generais no
 campo de batalha. Essa é uma das técnicas mais simples e mais usadas para
 cifrar mensagens.
@@ -23,49 +21,15 @@ com facilidade e não oferecem muita segurança na comunição, mas a cifra de
 César muitas vezes pode fazer parte de um sistema mais complexo de
 criptografia, como a cifra de Vigenère, e tem aplicação no sistema ROT13.
 
-## Objetivos
+## Fluxograma do Proceso
 
-O objetivo principal de aprendizagem deste projeto é que você tenha sua
-primeira experiência construindo uma aplicação web, usando os seus
-conhecimentos de **User Experience Design** e de **JavaScript**. Isso
-inclui desenhar um produto pensando nos usuários, construir uma interface,
-escutar eventos básicos do DOM, escrever a lógica que cifra e descifra
-mensagens, realizar testes básicos que comprovem (e documentem) esta lógica,
-e finalmente manipular o DOM para que ele mostre e imprima os resultados.
+Abaixo está a representação do fluxograma do processo de cifragem e decifragem de uma mensagem contemplado por essa aplicação web.
 
-Esperamos que neste projeto você possa pensar no usuário, entendendo quem ele
-é e suas necessidades. A ideia é que consiga entender o que o usuário
-necessita para criar o produto e o ajudar a resolver suas necessidades da
-melhor maneira possível.
+![Fluxograma do Processo: Cifra de César](./assets/FlowChart_P1Cipher.png)
 
-Também é esperado que você possa se organizar, tendo em conta o tempo e os
-recursos disponíveis. Essa é a primeira vez que avaliaremos suas soft skills,
-mas deve considerar que são habilidades que provavelmente já deve ter
-utilizado em diversas experiências em sua vida. O importante é que realize
-o projeto de forma integral.
+## Definição de usuários
 
-## Considerações gerais
-
-A lógica do projeto deve estar implementada inteiramente em JavaScript(ES6).
-Nesse projeto NÃO está permitido usar bibliotecas ou frameworks, só
-[vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e).
-
-Para começar este projeto você terá que fazer um _fork_ e _clonar_ este
-repositório que contém o _boilerplate_.
-
-O _boilerplate_ contém uma estrutura de arquivos como ponto de partida, assim
-como toda a configuração de dependência:
-
-```text
-./
-├── .gitignore
-├── README.md
-├── src
-│   ├── cipher.js
-│   ├── index.html
-│   ├── tests.js
-│   └── style.css
-```
+Os usuários definidos para utilizar essa aplicação web são aqueles com necessidades de cifrar ou decifrar mensagens curtas conhecendo a chave de deslocamento de acordo com o conceito de Cifra de Cesár.
 
 ## Parte obrigatória
 

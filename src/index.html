@@ -12,21 +12,27 @@
 </header>
 
 <body>
-  <!-- This is a comment. testar break para colocar teste -->
   <div class="container-form">
     <form class="input-cipher" name="form-cipher" onsubmit="buildMsgCipher(event, this)">
       <div class="input-datas">
-        <label class="label input-message" id="input-message">Mensagem : </label><br>
+        <label class="label input-message">Mensagem : </label><br>
         <textarea type="text" name="inputMessage" required rows="4" cols="35" placeholder="Inserir Mensagem">
         </textarea><br>
         <label class="label input-key">Chave : </label><br>
         <input type="number" name="inputKey" required placeholder="Chave de Deslocamento"><br>
-        <p></p>
-        <div class="submit">
-          <input type="submit" value="Cifrar">
+        <div class="radio">
+          <input type="radio" name="radioCipher" value="Cifrar">
+          <label class="label input-cipher" for="radioCipher">Cifrar</label>
+          <input type="radio" name="radioCipher" value="Decifrar">
+          <label class="label input-decipher" for="radioDecipher">Decifrar</label>
         </div><br>
-        <label for="show-msg"> Resultado : </label>
-        <p type="text" id="show-msg"></p>
+        <div>
+          <input class="submit input-datas" type="submit" name="selection" value="Enviar">
+        </div>
+        <div>
+          <label for="show-message"> Resultado : </label>
+          <p type="text" id="show-message"></p>
+        </div>
       </div>
     </form>
   </div>

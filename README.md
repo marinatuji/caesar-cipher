@@ -1,14 +1,5 @@
 # Cifra de César
 
-## Prefácio
-
-O aniversário da sua mãe está se aproximando e você está organizando uma festa
-surpresa. Para manter a festa em segredo foi criado um grupo de Whatsapp com
-amigxs e familiares. O problema é que as vezes sua mãe utiliza o seu celular
-e pode ser que ela veja as suas mensagens. Como a festa é surpresa, você
-decide criar uma aplicação que permita enviar mensagens criptografadas e depois
-descriptografar. Então agora é a hora de aplicar os seus super poderes 😎
-
 ## Introdução
 
 A [cifra de César](https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar) é um dos
